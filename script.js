@@ -34,3 +34,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
   sections.forEach((s) => observer.observe(s));
 });
+
+/* Ampliar imágenes de la galería */
+document.addEventListener("DOMContentLoaded", () => {
+  const box = document.getElementById("lightbox");
+  const big = box.querySelector("img");
+  document.querySelectorAll(".gallery img").forEach((img) =>
+    img.addEventListener("click", () => {
+      big.src = img.src;
+      big.alt = img.alt;
+      box.showModal();
+    })
+  );
+  box.addEventListener("click", () => box.close());
+});

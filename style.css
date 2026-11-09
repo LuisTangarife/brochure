@@ -139,3 +139,10 @@ footer p{font-size:14px}
   .logo small{display:none}
 }
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+/* Lightbox */
+.gallery img{cursor:zoom-in}
+#lightbox{border:0;background:transparent;max-width:96vw;max-height:94vh;margin:auto;overflow:visible}
+#lightbox::backdrop{background:rgba(3,6,12,.92)}
+#lightbox img{max-width:96vw;max-height:90vh;border-radius:12px;border:1px solid rgba(255,255,255,.18)}
+#lightbox button{position:absolute;top:-14px;right:-14px;width:42px;height:42px;border-radius:50%;border:0;background:var(--ember);color:#1B0A04;font-size:18px;cursor:pointer}
